@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka, Nunito } from "next/font/google";
 import { Sidebar } from "@/app/components/sidebar";
+import { TopBar } from "@/app/components/top-bar";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -23,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body>
         <div className="flex min-h-screen flex-col bg-[#F6ECDF] lg:flex-row">
           <Sidebar />
-          {/* TopBar (spec step 5): lg:hidden */}
+          <TopBar />
           <main className="min-w-0 flex-1 lg:h-screen lg:overflow-y-auto">
             {children}
           </main>

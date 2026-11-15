@@ -1,0 +1,50 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - link "OpenDayCare Sala Soles" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e9]:
+          - generic [ref=e10]: OpenDayCare
+          - generic [ref=e11]: Sala Soles
+      - link "Nueva publicación" [ref=e12] [cursor=pointer]:
+        - /url: "#"
+      - navigation [ref=e15]:
+        - link "Feed" [ref=e16] [cursor=pointer]:
+          - /url: /
+        - link "Niños" [ref=e19] [cursor=pointer]:
+          - /url: "#"
+        - link "Avisos" [ref=e24] [cursor=pointer]:
+          - /url: "#"
+        - link "Mi cuenta" [ref=e27] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e32]:
+        - generic [ref=e33]: C
+        - generic [ref=e34]:
+          - generic [ref=e35]: Caro Giménez
+          - generic [ref=e36]: Maestra · Soles
+        - link "Cerrar sesión" [ref=e37] [cursor=pointer]:
+          - /url: "#"
+    - main [ref=e40]:
+      - main [ref=e42]:
+        - img "Next.js logo" [ref=e43]
+        - generic [ref=e44]:
+          - heading [level=1] [ref=e45]:
+            - text: To get started, edit the
+            - code [ref=e46]: page.tsx
+            - text: file.
+          - paragraph [ref=e47]:
+            - text: Looking for a starting point or more instructions? Head over to
+            - link "Templates" [ref=e48] [cursor=pointer]:
+              - /url: https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app
+            - text: or the
+            - link "Learning" [ref=e49] [cursor=pointer]:
+              - /url: https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app
+            - text: center.
+        - generic [ref=e50]:
+          - link [ref=e51] [cursor=pointer]:
+            - /url: https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app
+            - img "Vercel logomark" [ref=e52]
+            - text: Deploy Now
+          - link "Documentation" [ref=e53] [cursor=pointer]:
+            - /url: https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app
+  - button "Open Next.js Dev Tools" [ref=e59] [cursor=pointer]

@@ -1,6 +1,6 @@
 # SPEC 01 — Home: pantalla Feed (visual)
 
-> **Status:** Aprobado
+> **Status:** Implementado
 > **Depends on:** ninguna
 > **Date:** 2026-11-14
 > **Objective:** Implementar el Feed de `references/pantallas/feed.dc.html` como home (`/`) con datos mock tipados y estilo idéntico al comp, incluyendo una adaptación responsive básica (top bar en mobile).
@@ -76,15 +76,15 @@ Tokens del comp (única fuente para clases): fondo `#F6ECDF` · superficie `#FFF
 ## Acceptance criteria
 
 - [ ] Al abrir `http://localhost:3000/` se renderiza el feed (no el scaffold de create-next-app)
-- [ ] `/` carga sin errores en consola con `npm run dev`.
-- [ ] A 1280px el layout coincide con el comp: sidebar 248px sticky, main con scroll propio, contenido centrado max 760px con padding 34/40/80.
-- [ ] Títulos y avatares renderizan en Fredoka y el cuerpo en Nunito, vía `next/font` (sin flash de fuente sin estilo).
-- [ ] Los 3 posts muestran badges y colores exactos por tipo (logro/actividad/anuncio según la tabla de tokens).
-- [ ] El placeholder de foto replica borde dashed, fondo, ícono cámara y caption "Foto · pintando con témperas".
-- [ ] Ningún link interno navega a una 404: todos apuntan a `#`.
-- [ ] A 375px no hay scroll horizontal, se ve la top bar (logo + Nueva publicación) y el feed ocupa el ancho con padding reducido.
-- [ ] `npx tsc --noEmit` pasa.
-- [ ] ESLint no agrega errores en los archivos tocados (el fallo preexistente de `references/pantallas/support.js` no cuenta).
+- [x] `/` carga sin errores en consola con `npm run dev`.
+- [x] A 1280px el layout coincide con el comp: sidebar 248px sticky, main con scroll propio, contenido centrado max 760px con padding 34/40/80.
+- [x] Títulos y avatares renderizan en Fredoka y el cuerpo en Nunito, vía `next/font` (sin flash de fuente sin estilo).
+- [x] Los 3 posts muestran badges y colores exactos por tipo (logro/actividad/anuncio según la tabla de tokens).
+- [x] El placeholder de foto replica borde dashed, fondo, ícono cámara y caption "Foto · pintando con témperas".
+- [x] Ningún link interno navega a una 404: todos apuntan a `#`.
+- [x] A 375px no hay scroll horizontal, se ve la top bar (logo + Nueva publicación) y el feed ocupa el ancho con padding reducido.
+- [x] `npx tsc --noEmit` pasa.
+- [x] ESLint no agrega errores en los archivos tocados (el fallo preexistente de `references/pantallas/support.js` no cuenta).
 
 ## Decisions
 

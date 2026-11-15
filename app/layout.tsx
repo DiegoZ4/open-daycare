@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fredoka, Nunito } from "next/font/google";
+import { Sidebar } from "@/app/components/sidebar";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -21,7 +22,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="es" className={`${fredoka.variable} ${nunito.variable}`}>
       <body>
         <div className="flex min-h-screen flex-col bg-[#F6ECDF] lg:flex-row">
-          {/* Sidebar (spec step 4): hidden lg:flex, sticky */}
+          <Sidebar />
           {/* TopBar (spec step 5): lg:hidden */}
           <main className="min-w-0 flex-1 lg:h-screen lg:overflow-y-auto">
             {children}

@@ -37,10 +37,14 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - Context 7 Usaremos este MCP para traer la documentacion actualizada del framework.
 
 
-## Spec Drive Development - Skills
+## Spec Drive Development
+
+Flujo por pantalla: `/spec` (crear) → `/spec-impl` (implementar) → `/spec-verifier` (verificar y marcar checks).
 
 - /spec Usaremos esta habilidad para crear las especificaciones.
 - /spec-impl Usaremos esta skill para hacer las implementaciones.
+- /spec-verifier Verifica los acceptance criteria de un spec, corrige lo que falle y marca los checks. Uso: `/spec-verifier @specs/01-home-feed-visual.md`. Definido en `.opencode/commands/spec-verifier.md`; ejecuta el agente `spec-verify` como subagent.
+- Agente `spec-verify` (`.opencode/agents/spec-verify.md`): reverifica cada criterio desde cero con evidencia — comparación visual contra `references/pantallas/*.dc.html` con Playwright MCP (screenshots en `./playwright-mcp`), prácticas de Next.js vía Context7 + docs locales, y `npx tsc --noEmit` / lint (solo archivos tocados). Si un criterio falla, corrige `app/**`, `specs/**` o `next.config.ts` y re-verifica antes de marcar. Nunca edita `references/` ni `.opencode/`; no hace commits.
 
 ## Reglas de codigo
 

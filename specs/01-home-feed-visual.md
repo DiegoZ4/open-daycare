@@ -75,7 +75,7 @@ Tokens del comp (única fuente para clases): fondo `#F6ECDF` · superficie `#FFF
 
 ## Acceptance criteria
 
-- [ ] Al abrir `http://localhost:3000/` se renderiza el feed (no el scaffold de create-next-app)
+- [x] Al abrir `http://localhost:3000/` se renderiza el feed (no el scaffold de create-next-app)
 - [x] `/` carga sin errores en consola con `npm run dev`.
 - [x] A 1280px el layout coincide con el comp: sidebar 248px sticky, main con scroll propio, contenido centrado max 760px con padding 34/40/80.
 - [x] Títulos y avatares renderizan en Fredoka y el cuerpo en Nunito, vía `next/font` (sin flash de fuente sin estilo).

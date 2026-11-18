@@ -1,6 +1,6 @@
 # SPEC 02 — Niños: listado y alta (visual)
 
-> **Status:** Aprobado
+> **Status:** Aprobado/
 > **Depends on:** SPEC 01
 > **Date:** 2026-11-17
 > **Objective:** Implementar el listado de niños (`/children`) y el alta de niño (`/children/new`) como cáscara visual fiel a los comps, refactorizando el shell compartido a un route group.

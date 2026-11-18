@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import type { Child, Parent } from "@/app/data/children";
 import { children, classroomSummary } from "@/app/data/children";
 
@@ -25,8 +26,16 @@ export async function generateMetadata(
   return { title: child ? `${child.name} · OpenDayCare` : "Niños · OpenDayCare" };
 }
 
-export default async function ChildProfilePage(props: PageProps<"/children/[id]">) {
-  const { id } = await props.params;
+export default function ChildProfilePage(props: PageProps<"/children/[id]">) {
+  return (
+    <Suspense fallback={<div className="mx-auto w-full max-w-[820px] pt-[34px] px-4 pb-20 lg:px-10">Cargando...</div>}>
+      <ChildProfileContent params={props.params} />
+    </Suspense>
+  );
+}
+
+async function ChildProfileContent({ params }: { params: PageProps<"/children/[id]">['params'] }) {
+  const { id } = await params;
   const child = getChild(id);
   if (!child) notFound();
 

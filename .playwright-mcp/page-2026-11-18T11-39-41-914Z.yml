@@ -1,0 +1,55 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - banner [ref=f21e3]:
+      - link "OpenDayCare" [ref=f21e4] [cursor=pointer]:
+        - /url: /
+      - link "Nueva publicación" [ref=f21e10] [cursor=pointer]:
+        - /url: "#"
+    - main [ref=f21e13]:
+      - generic [ref=f21e14]:
+        - link "Volver a Niños" [ref=f21e15] [cursor=pointer]:
+          - /url: /children
+        - generic [ref=f21e18]:
+          - generic [ref=f21e19]:
+            - generic [ref=f21e20]:
+              - generic [ref=f21e21]: M
+              - generic [ref=f21e22]:
+                - heading "Mateo Fernández" [level=1] [ref=f21e23]
+                - paragraph [ref=f21e24]: 3 años · Sala Soles
+              - link "Editar" [ref=f21e25] [cursor=pointer]:
+                - /url: /children/new
+            - generic [ref=f21e31]:
+              - generic [ref=f21e32]: Alergias y notas
+              - generic [ref=f21e33]: Alergia al maní. Evitar frutos secos. Lleva inhalador en la mochila.
+            - generic [ref=f21e34]:
+              - generic [ref=f21e35]:
+                - generic [ref=f21e36]: Fecha de nacimiento
+                - generic [ref=f21e37]: 12 mar 2022
+              - generic [ref=f21e38]:
+                - generic [ref=f21e39]: Sala
+                - generic [ref=f21e40]: Soles
+              - generic [ref=f21e41]:
+                - generic [ref=f21e42]: Ingreso
+                - generic [ref=f21e43]: feb 2025
+          - generic [ref=f21e44]:
+            - link "Resumen del día" [ref=f21e45] [cursor=pointer]:
+              - /url: "#"
+            - generic [ref=f21e49]:
+              - generic [ref=f21e50]: PADRES VINCULADOS
+              - generic [ref=f21e51]:
+                - generic [ref=f21e52]:
+                  - generic [ref=f21e53]: L
+                  - generic [ref=f21e54]:
+                    - generic [ref=f21e55]: Lucía Fernández
+                    - generic [ref=f21e56]: Mamá · activa
+                  - generic [ref=f21e57]: ACTIVA
+                - generic [ref=f21e58]:
+                  - generic [ref=f21e59]: D
+                  - generic [ref=f21e60]:
+                    - generic [ref=f21e61]: Diego Fernández
+                    - generic [ref=f21e62]: Papá · invitación enviada
+                  - generic [ref=f21e63]: PENDIENTE
+                - link "Vincular otro padre" [ref=f21e64] [cursor=pointer]:
+                  - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=f21e74] [cursor=pointer]
+  - alert [ref=f21e78]

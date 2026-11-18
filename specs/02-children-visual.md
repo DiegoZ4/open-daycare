@@ -83,28 +83,28 @@ Tokens nuevos (además de los de la spec 01): contenido listado max-width **880p
 
 ## Acceptance criteria
 
-- [ ] Al abrir `http://localhost:3000/children` se renderiza el listado (kicker "GESTIÓN", título "Niños", CTA "Agregar niño", buscador, divider "SALA SOLES · 8 niños" y 8 cards).
-- [ ] `/children`, `/children/new` y `/children/[id]` cargan sin errores en consola con `npm run dev`.
-- [ ] A 1280px el listado coincide con el comp: contenido 880px con padding 34/40/80, grilla de 2 columnas con gap 14, cards con radio 18 y sombra exacta.
-- [ ] Los 8 avatares usan la paleta exacta del comp por niño (pares de color por iniciales).
-- [ ] Chips y chevrons exactos: MANÍ y LACTOSA (`#FBD8CC`/`#D9684A`), VINCULAR (`#F9D2DE`/`#C56486`), chevron `#CBB89F` en el resto.
-- [ ] El hover de las cards aplica borde `#F2A78E` + `translateY(-2px)` con transición de .15s.
-- [ ] El sidebar marca "Niños" activo en `/children` (y en `/children/[id]`) y "Feed" activo en `/`, y ambos links navegan entre sí.
-- [ ] Al abrir `/children/new` se renderiza la card centrada de 520px **sin sidebar ni top bar**, con header Cancelar / "Agregar niño" / Guardar y los 5 campos con placeholders exactos ("Ej. Martina López", "dd/mm/aaaa", "Soles" + chevron, "Ej. Maní, Lactosa", "Indicaciones, medicación, contactos…").
-- [ ] "Agregar niño" (listado), "Cancelar" y "Guardar" (alta) navegan entre `/children` ↔ `/children/new`; no hay lógica de guardado.
-- [ ] Las 8 cards del listado navegan a `/children/{id}` (links reales, sin `#`).
-- [ ] `/children/mateo-fernandez` renderiza el perfil fiel al comp a 1280px: contenido 820px con padding 34/40/80, "Volver a Niños" → `/children`, avatar 84px con los colores del niño, nombre Fredoka 28px, "3 años · Sala Soles" y botón "Editar" → `/children/new`.
-- [ ] Caja "Alergias y notas" con colores exactos (fondo `#FBDAD6`, ícono `#F4A8A0`, título `#C5413A`, texto `#B25249`) y card de info con las 3 filas (Fecha de nacimiento, Sala, Ingreso) y dividers `#F0E6D8`.
-- [ ] Columna derecha: botón "Resumen del día" (`#3F362E`) y "PADRES VINCULADOS" con chips ACTIVA (`#CFEBD8`/`#3E9B6C`) y PENDIENTE (`#F7E7A6`/`#9A7B1E`) y "Vincular otro padre" con círculo dashed.
-- [ ] Los 8 perfiles renderizan con data coherente: cantidad de padres acorde a `parentsSummary` y caja de alergias solo en niños con datos.
-- [ ] Un id inexistente (ej. `/children/pepito`) devuelve 404.
-- [ ] `/children/new` sigue resolviendo al alta (la ruta estática tiene precedencia sobre `[id]`).
-- [ ] El título de la pestaña es "{nombre} · OpenDayCare" en el perfil (generateMetadata).
-- [ ] A 375px: `/children` sin scroll horizontal, con top bar y grilla de 1 columna; `/children/new` sin scroll horizontal, card a ancho completo con padding lateral reducido; el perfil apila las columnas sin scroll horizontal.
-- [ ] Los links a pantallas futuras siguen muertos (`#`): Resumen del día, Vincular otro padre, Avisos, Mi cuenta, Nueva publicación y logout.
-- [ ] El Feed (`/`) no se rompe tras el refactor: "Feed" activo, contenido de 760px y los 3 posts intactos (regresión de la spec 01).
-- [ ] `npx tsc --noEmit` pasa.
-- [ ] ESLint no agrega errores en los archivos tocados (el fallo preexistente de `references/pantallas/support.js` no cuenta).
+- [x] Al abrir `http://localhost:3000/children` se renderiza el listado (kicker "GESTIÓN", título "Niños", CTA "Agregar niño", buscador, divider "SALA SOLES · 8 niños" y 8 cards).
+- [x] `/children`, `/children/new` y `/children/[id]` cargan sin errores en consola con `npm run dev`.
+- [x] A 1280px el listado coincide con el comp: contenido 880px con padding 34/40/80, grilla de 2 columnas con gap 14, cards con radio 18 y sombra exacta.
+- [x] Los 8 avatares usan la paleta exacta del comp por niño (pares de color por iniciales).
+- [x] Chips y chevrons exactos: MANÍ y LACTOSA (`#FBD8CC`/`#D9684A`), VINCULAR (`#F9D2DE`/`#C56486`), chevron `#CBB89F` en el resto.
+- [x] El hover de las cards aplica borde `#F2A78E` + `translateY(-2px)` con transición de .15s.
+- [x] El sidebar marca "Niños" activo en `/children` (y en `/children/[id]`) y "Feed" activo en `/`, y ambos links navegan entre sí.
+- [x] Al abrir `/children/new` se renderiza la card centrada de 520px **sin sidebar ni top bar**, con header Cancelar / "Agregar niño" / Guardar y los 5 campos con placeholders exactos ("Ej. Martina López", "dd/mm/aaaa", "Soles" + chevron, "Ej. Maní, Lactosa", "Indicaciones, medicación, contactos…").
+- [x] "Agregar niño" (listado), "Cancelar" y "Guardar" (alta) navegan entre `/children` ↔ `/children/new`; no hay lógica de guardado.
+- [x] Las 8 cards del listado navegan a `/children/{id}` (links reales, sin `#`).
+- [x] `/children/mateo-fernandez` renderiza el perfil fiel al comp a 1280px: contenido 820px con padding 34/40/80, "Volver a Niños" → `/children`, avatar 84px con los colores del niño, nombre Fredoka 28px, "3 años · Sala Soles" y botón "Editar" → `/children/new`.
+- [x] Caja "Alergias y notas" con colores exactos (fondo `#FBDAD6`, ícono `#F4A8A0`, título `#C5413A`, texto `#B25249`) y card de info con las 3 filas (Fecha de nacimiento, Sala, Ingreso) y dividers `#F0E6D8`.
+- [x] Columna derecha: botón "Resumen del día" (`#3F362E`) y "PADRES VINCULADOS" con chips ACTIVA (`#CFEBD8`/`#3E9B6C`) y PENDIENTE (`#F7E7A6`/`#9A7B1E`) y "Vincular otro padre" con círculo dashed.
+- [x] Los 8 perfiles renderizan con data coherente: cantidad de padres acorde a `parentsSummary` y caja de alergias solo en niños con datos.
+- [x] Un id inexistente (ej. `/children/pepito`) devuelve 404.
+- [x] `/children/new` sigue resolviendo al alta (la ruta estática tiene precedencia sobre `[id]`).
+- [x] El título de la pestaña es "{nombre} · OpenDayCare" en el perfil (generateMetadata).
+- [x] A 375px: `/children` sin scroll horizontal, con top bar y grilla de 1 columna; `/children/new` sin scroll horizontal, card a ancho completo con padding lateral reducido; el perfil apila las columnas sin scroll horizontal.
+- [x] Los links a pantallas futuras siguen muertos (`#`): Resumen del día, Vincular otro padre, Avisos, Mi cuenta, Nueva publicación y logout.
+- [x] El Feed (`/`) no se rompe tras el refactor: "Feed" activo, contenido de 760px y los 3 posts intactos (regresión de la spec 01).
+- [x] `npx tsc --noEmit` pasa.
+- [x] ESLint no agrega errores en los archivos tocados (el fallo preexistente de `references/pantallas/support.js` no cuenta).
 
 ## Decisions
 

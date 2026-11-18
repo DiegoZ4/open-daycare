@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Fredoka, Nunito } from "next/font/google";
-import { Sidebar } from "@/app/components/sidebar";
-import { TopBar } from "@/app/components/top-bar";
 import "./globals.css";
 
 const fredoka = Fredoka({
@@ -18,18 +17,10 @@ export const metadata: Metadata = {
   title: "OpenDayCare",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es" className={`${fredoka.variable} ${nunito.variable}`}>
-      <body>
-        <div className="flex min-h-screen flex-col bg-[#F6ECDF] lg:flex-row">
-          <Sidebar />
-          <TopBar />
-          <main className="min-w-0 flex-1 lg:h-screen lg:overflow-y-auto">
-            {children}
-          </main>
-        </div>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

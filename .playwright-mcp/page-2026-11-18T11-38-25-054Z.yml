@@ -1,0 +1,27 @@
+- generic [active] [ref=f15e1]:
+  - generic [ref=f15e123]:
+    - banner [ref=f15e124]:
+      - link "Cancelar" [ref=f15e125] [cursor=pointer]:
+        - /url: /children
+      - generic [ref=f15e126]: Agregar niño
+      - link "Guardar" [ref=f15e127] [cursor=pointer]:
+        - /url: /children
+    - generic [ref=f15e128]:
+      - generic [ref=f15e129]:
+        - generic [ref=f15e130]: NOMBRE COMPLETO
+        - textbox "Ej. Martina López" [ref=f15e131]
+      - generic [ref=f15e132]:
+        - generic [ref=f15e133]:
+          - generic [ref=f15e134]: FECHA DE NACIMIENTO
+          - textbox "dd/mm/aaaa" [ref=f15e135]
+        - generic [ref=f15e136]:
+          - generic [ref=f15e137]: SALA
+          - generic [ref=f15e138]: Soles
+      - generic [ref=f15e141]:
+        - generic [ref=f15e142]: ALERGIAS (ETIQUETAS)
+        - textbox "Ej. Maní, Lactosa" [ref=f15e143]
+      - generic [ref=f15e144]:
+        - generic [ref=f15e145]: NOTAS MÉDICAS
+        - textbox "Indicaciones, medicación, contactos…" [ref=f15e146]
+  - button "Open Next.js Dev Tools" [ref=f15e117] [cursor=pointer]
+  - alert [ref=f15e121]: Niños

@@ -1,0 +1,30 @@
+- generic [active] [ref=f13e1]:
+  - generic [ref=f13e2]:
+    - complementary [ref=f13e3]:
+      - link "OpenDayCare Sala Soles" [ref=f13e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f13e9]:
+          - generic [ref=f13e10]: OpenDayCare
+          - generic [ref=f13e11]: Sala Soles
+      - link "Nueva publicación" [ref=f13e12] [cursor=pointer]:
+        - /url: "#"
+      - navigation [ref=f13e15]:
+        - link "Feed" [ref=f13e16] [cursor=pointer]:
+          - /url: /
+        - link "Niños" [ref=f13e19] [cursor=pointer]:
+          - /url: /children
+        - link "Avisos" [ref=f13e24] [cursor=pointer]:
+          - /url: "#"
+        - link "Mi cuenta" [ref=f13e27] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f13e32]:
+        - generic [ref=f13e33]: C
+        - generic [ref=f13e34]:
+          - generic [ref=f13e35]: Caro Giménez
+          - generic [ref=f13e36]: Maestra · Soles
+        - link "Cerrar sesión" [ref=f13e37] [cursor=pointer]:
+          - /url: "#"
+    - main [ref=f13e40]:
+      - generic [ref=f13e41]: Cargando...
+  - button "Open Next.js Dev Tools" [ref=f13e47] [cursor=pointer]
+  - alert [ref=f13e51]

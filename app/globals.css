@@ -12,6 +12,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+input,
+textarea {
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: #B6A99B;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

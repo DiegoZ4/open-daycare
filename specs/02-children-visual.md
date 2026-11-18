@@ -1,6 +1,6 @@
 # SPEC 02 — Niños: listado, alta y perfil (visual)
 
-> **Status:** Aprobado
+> **Status:** Implementado
 > **Depends on:** SPEC 01
 > **Date:** 2026-11-17
 > **Objective:** Implementar el listado de niños (`/children`), el alta (`/children/new`) y el perfil dinámico (`/children/[id]`) como cáscara visual fiel a los comps, refactorizando el shell compartido a un route group.

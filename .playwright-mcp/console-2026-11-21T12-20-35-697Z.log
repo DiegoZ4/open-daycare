@@ -1,0 +1,2 @@
+[   18157ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=NQfd8oxADD18X8zrPS4l1' failed: Error during WebSocket handshake: net::ERR_CONNECTION_RESET @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_1ohys4wzsw--s._.js:16430
+[   40188ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/hmr?id=NQfd8oxADD18X8zrPS4l1' failed: Error during WebSocket handshake: net::ERR_CONNECTION_RESET @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_client_1ohys4wzsw--s._.js:16430

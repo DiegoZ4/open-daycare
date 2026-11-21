@@ -1,0 +1,22 @@
+- generic [ref=f19e2]:
+  - generic [ref=f19e3]:
+    - generic [ref=f19e6]: OpenDayCare
+    - generic [ref=f19e12]:
+      - heading "El día de cada niño, compartido con su familia." [level=1] [ref=f19e13]: El día de cada niño,compartido con su familia.
+      - paragraph [ref=f19e14]: Publicá momentos, gestioná las salas y mantené a las familias cerca, desde un solo lugar.
+    - generic [ref=f19e15]: 🌿 Guardería Sala Soles
+  - generic [ref=f19e17]:
+    - heading "Iniciar sesión" [level=2] [ref=f19e18]
+    - paragraph [ref=f19e19]: Ingresá para ver el día de hoy.
+    - generic [ref=f19e20]: EMAIL
+    - textbox [ref=f19e21]: caro@opendaycare.com
+    - generic [ref=f19e22]: CONTRASEÑA
+    - textbox "••••••••" [ref=f19e23]
+    - link "¿Olvidaste tu contraseña?" [ref=f19e25] [cursor=pointer]:
+      - /url: "#"
+    - link "Iniciar sesión" [ref=f19e26] [cursor=pointer]:
+      - /url: /
+    - paragraph [ref=f19e27]:
+      - text: ¿Te invitó la guardería?
+      - link "Activá tu cuenta" [ref=f19e28] [cursor=pointer]:
+        - /url: /activate-account

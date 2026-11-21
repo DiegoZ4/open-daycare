@@ -57,7 +57,7 @@ export function Sidebar() {
             <div className="text-[12px] text-[#A89A8B]">{staffUser.role}</div>
           </div>
           <a
-            href="#"
+            href="/login"
             title="Cerrar sesión"
             className="shrink-0 flex items-center justify-center w-8 h-8 rounded-[10px] bg-[#F6ECDF] text-[#94887B]"
           >

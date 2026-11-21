@@ -1,0 +1,18 @@
+- generic [active] [ref=f10e1]:
+  - generic [ref=f10e4]:
+    - heading "Iniciar sesión" [level=2] [ref=f10e5]
+    - paragraph [ref=f10e6]: Ingresá para ver el día de hoy.
+    - generic [ref=f10e7]: EMAIL
+    - textbox [ref=f10e8]: caro@opendaycare.com
+    - generic [ref=f10e9]: CONTRASEÑA
+    - textbox "••••••••" [ref=f10e10]
+    - link "¿Olvidaste tu contraseña?" [ref=f10e12] [cursor=pointer]:
+      - /url: "#"
+    - link "Iniciar sesión" [ref=f10e13] [cursor=pointer]:
+      - /url: /
+    - paragraph [ref=f10e14]:
+      - text: ¿Te invitó la guardería?
+      - link "Activá tu cuenta" [ref=f10e15] [cursor=pointer]:
+        - /url: /activate-account
+  - button "Open Next.js Dev Tools" [ref=f10e21] [cursor=pointer]
+  - alert [ref=f10e25]

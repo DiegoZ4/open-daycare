@@ -1,0 +1,4 @@
+[      24ms] [ERROR] WebSocket connection to 'ws://[::1]:3000/_next/hmr?id=H54yqVuELOLCR5vZBwBfI' failed: Error during WebSocket handshake: net::ERR_INVALID_HTTP_RESPONSE @ http://[::1]:3000/_next/static/chunks/node_modules_next_dist_client_1ohys4wzsw--s._.js:16430
+[     135ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) @ http://[::1]:3000/activate-account:1
+[     148ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://[::1]:3000/_next/static/chunks/node_modules_next_dist_1bjkg68unqmjx._.js:761
+[     275ms] [ERROR] WebSocket connection to 'ws://[::1]:3000/_next/hmr?id=rWwFo4abKth2rJQA6tD4A' failed: Error during WebSocket handshake: net::ERR_INVALID_HTTP_RESPONSE @ http://[::1]:3000/_next/static/chunks/node_modules_next_dist_client_1ohys4wzsw--s._.js:16430

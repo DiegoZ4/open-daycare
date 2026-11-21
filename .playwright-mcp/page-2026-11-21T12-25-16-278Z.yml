@@ -1,0 +1,15 @@
+- generic [ref=f15e4]:
+  - heading "Iniciar sesión" [level=2] [ref=f15e5]
+  - paragraph [ref=f15e6]: Ingresá para ver el día de hoy.
+  - generic [ref=f15e7]: EMAIL
+  - textbox [ref=f15e8]: caro@opendaycare.com
+  - generic [ref=f15e9]: CONTRASEÑA
+  - textbox "••••••••" [ref=f15e10]
+  - link "¿Olvidaste tu contraseña?" [ref=f15e12] [cursor=pointer]:
+    - /url: "#"
+  - link "Iniciar sesión" [ref=f15e13] [cursor=pointer]:
+    - /url: /
+  - paragraph [ref=f15e14]:
+    - text: ¿Te invitó la guardería?
+    - link "Activá tu cuenta" [ref=f15e15] [cursor=pointer]:
+      - /url: /activate-account

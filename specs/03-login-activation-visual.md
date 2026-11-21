@@ -1,6 +1,6 @@
 # SPEC 03 — Login y activación de cuenta (visual)
 
-> **Status:** Aprobado
+> **Status:** Implementado
 > **Depends on:** SPEC 01, SPEC 02
 > **Date:** 2026-11-18
 > **Objective:** Implementar `/login` y `/activate-account` como cáscara visual fiel a `login.dc.html` y `activar-cuenta.dc.html`, sin selector de rol ni autenticación real.
@@ -43,21 +43,21 @@ Tokens nuevos (además de los de las specs 01–02): fondo de ambas páginas `#F
 
 ## Acceptance criteria
 
-- [ ] Al abrir `http://localhost:3000/login` se renderiza el split del comp a 1280px: panel coral (logo, titular, descripción, footer "🌿 Guardería Sala Soles") y formulario de max 392px (título, intro, EMAIL, CONTRASEÑA, link, CTA, footer).
-- [ ] `/login` no contiene el bloque "INGRESO COMO" ni los botones Personal/Familia.
-- [ ] Los valores son los del comp: email `caro@opendaycare.com` y placeholder `••••••••` en login; código `7K4P9`, email `lucia.fernandez@gmail.com`, contraseña con valor y autorización marcada en `/activate-account`.
-- [ ] El CTA "Iniciar sesión" navega a `/` (feed).
-- [ ] "¿Olvidaste tu contraseña?" y "Activar mi cuenta" quedan como links muertos `#`.
-- [ ] "Activá tu cuenta" (login) navega a `/activate-account` y "Iniciar sesión" (activación) vuelve a `/login`.
-- [ ] Al abrir `http://localhost:3000/activate-account` se renderiza fiel al comp a 1280px: ícono, "Bienvenida a OpenDayCare", card de invitación con avatar `#A9D9E8`/`#1F7A93`, tres campos (contraseña con borde `#F2A78E`), caja `#FBF1D6` con check `#5FB97E`, CTA y footer.
-- [ ] Ambas páginas usan fondo `#FBF4EC` en toda la viewport (no el `#F6ECDF` global).
-- [ ] El logout del sidebar navega a `/login` sin alterar ítems activos ni el shell.
-- [ ] Títulos de pestaña: "Iniciar sesión · OpenDayCare" y "Activar cuenta · OpenDayCare".
-- [ ] A 375px: `/login` sin scroll horizontal, sin panel coral y con el formulario centrado; `/activate-account` sin scroll horizontal y card a ancho disponible.
-- [ ] Ningún link interno de las páginas nuevas lleva a una 404 (existen o son `#`).
-- [ ] Regresión: `/`, `/children`, `/children/new` y `/children/[id]` renderizan igual que tras la spec 02.
-- [ ] `npx tsc --noEmit` pasa.
-- [ ] ESLint no agrega errores en los archivos tocados (el fallo preexistente de `references/pantallas/support.js` no cuenta).
+- [x] Al abrir `http://localhost:3000/login` se renderiza el split del comp a 1280px: panel coral (logo, titular, descripción, footer "🌿 Guardería Sala Soles") y formulario de max 392px (título, intro, EMAIL, CONTRASEÑA, link, CTA, footer).
+- [x] `/login` no contiene el bloque "INGRESO COMO" ni los botones Personal/Familia.
+- [x] Los valores son los del comp: email `caro@opendaycare.com` y placeholder `••••••••` en login; código `7K4P9`, email `lucia.fernandez@gmail.com`, contraseña con valor y autorización marcada en `/activate-account`.
+- [x] El CTA "Iniciar sesión" navega a `/` (feed).
+- [x] "¿Olvidaste tu contraseña?" y "Activar mi cuenta" quedan como links muertos `#`.
+- [x] "Activá tu cuenta" (login) navega a `/activate-account` y "Iniciar sesión" (activación) vuelve a `/login`.
+- [x] Al abrir `http://localhost:3000/activate-account` se renderiza fiel al comp a 1280px: ícono, "Bienvenida a OpenDayCare", card de invitación con avatar `#A9D9E8`/`#1F7A93`, tres campos (contraseña con borde `#F2A78E`), caja `#FBF1D6` con check `#5FB97E`, CTA y footer.
+- [x] Ambas páginas usan fondo `#FBF4EC` en toda la viewport (no el `#F6ECDF` global).
+- [x] El logout del sidebar navega a `/login` sin alterar ítems activos ni el shell.
+- [x] Títulos de pestaña: "Iniciar sesión · OpenDayCare" y "Activar cuenta · OpenDayCare".
+- [x] A 375px: `/login` sin scroll horizontal, sin panel coral y con el formulario centrado; `/activate-account` sin scroll horizontal y card a ancho disponible.
+- [x] Ningún link interno de las páginas nuevas lleva a una 404 (existen o son `#`).
+- [x] Regresión: `/`, `/children`, `/children/new` y `/children/[id]` renderizan igual que tras la spec 02.
+- [x] `npx tsc --noEmit` pasa.
+- [x] ESLint no agrega errores en los archivos tocados (el fallo preexistente de `references/pantallas/support.js` no cuenta).
 
 ## Decisions
 

@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import type { Child, Parent } from "@/app/data/children";
-import { children, classroomSummary } from "@/app/data/children";
+import { children } from "@/app/data/children";
+import { EditChildButton } from "@/app/components/edit-child-button";
 
 const PARENT_STATUS_CHIP: Record<Parent["status"], { label: string; chipClass: string }> = {
   active: { label: "ACTIVA", chipClass: "bg-[#CFEBD8] text-[#3E9B6C]" },
@@ -41,7 +42,7 @@ async function ChildProfileContent({ params }: { params: PageProps<"/children/[i
 
   const infoRows = [
     { label: "Fecha de nacimiento", value: child.birthDate },
-    { label: "Sala", value: "Soles" },
+    { label: "Sala", value: child.sala },
     { label: "Ingreso", value: child.enrollment },
   ];
 
@@ -83,19 +84,13 @@ async function ChildProfileContent({ params }: { params: PageProps<"/children/[i
                 {child.name}
               </h1>
               <p className="mt-[3px] mb-0 text-[15px] text-[#94887B]">
-                {child.age} · {classroomSummary.name}
+                {child.age} · Sala {child.sala}
               </p>
             </div>
-            {/* El comp apunta Editar a agregar-nino; la edición real va en su spec. */}
-            <Link
-              href="/children/new"
-              className="shrink-0 border-[1.5px] border-[#ECE0D0] bg-[#FFFDF9] text-[#6E6359] font-bold text-[14px] py-[9px] px-4 rounded-[12px]"
-            >
-              Editar
-            </Link>
+            <EditChildButton child={child} />
           </div>
 
-          {child.allergyTag || child.medicalNotes ? (
+          {child.allergies.length > 0 || child.medicalNotes ? (
             <div className="flex gap-[14px] bg-[#FBDAD6] rounded-[16px] py-4 px-[18px]">
               <div className="flex items-center justify-center shrink-0 w-10 h-10 rounded-[11px] bg-[#F4A8A0]">
                 <svg

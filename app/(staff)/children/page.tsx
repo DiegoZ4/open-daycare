@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { ChildCard } from "@/app/components/child-card";
+import { AddChildButton } from "@/app/components/add-child-button";
 import { children, classroomSummary } from "@/app/data/children";
 
 export const metadata: Metadata = {
@@ -17,24 +17,7 @@ export default function ChildrenPage() {
           </div>
           <h1 className="m-0 font-display font-semibold text-[30px] text-[#3F362E]">Niños</h1>
         </div>
-        <Link
-          href="/children/new"
-          className="flex items-center gap-2 py-[11px] px-[18px] rounded-[14px] bg-[linear-gradient(180deg,#F4977E,#EE8164)] text-white font-extrabold text-[14.5px] shadow-[0_8px_18px_-8px_rgba(238,129,100,0.7)]"
-        >
-          <svg
-            width="17"
-            height="17"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#fff"
-            strokeWidth="2.4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M12 5v14M5 12h14" />
-          </svg>
-          Agregar niño
-        </Link>
+        <AddChildButton />
       </div>
 
       <div className="flex items-center gap-[11px] bg-[#FFFDF9] border border-[#ECE0D0] rounded-[14px] py-3 px-4 mb-[22px]">
@@ -63,7 +46,7 @@ export default function ChildrenPage() {
           {classroomSummary.name}
         </span>
         <span className="text-[13px] text-[#A89A8B]">
-          {classroomSummary.childrenCount} niños
+          {children.length} niños
         </span>
         <span className="flex-1 h-px bg-[#E7DAC8]" />
       </div>

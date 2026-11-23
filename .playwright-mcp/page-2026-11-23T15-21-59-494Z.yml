@@ -1,0 +1,127 @@
+- generic [ref=f12e1]:
+  - generic [ref=f12e2]:
+    - complementary [ref=f12e3]:
+      - link "OpenDayCare Sala Soles" [ref=f12e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f12e9]:
+          - generic [ref=f12e10]: OpenDayCare
+          - generic [ref=f12e11]: Sala Soles
+      - link "Nueva publicación" [ref=f12e12] [cursor=pointer]:
+        - /url: "#"
+      - navigation [ref=f12e15]:
+        - link "Feed" [ref=f12e16] [cursor=pointer]:
+          - /url: /
+        - link "Niños" [ref=f12e19] [cursor=pointer]:
+          - /url: /children
+        - link "Avisos" [ref=f12e24] [cursor=pointer]:
+          - /url: "#"
+        - link "Mi cuenta" [ref=f12e27] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f12e32]:
+        - generic [ref=f12e33]: C
+        - generic [ref=f12e34]:
+          - generic [ref=f12e35]: Caro Giménez
+          - generic [ref=f12e36]: Maestra · Soles
+        - link "Cerrar sesión" [ref=f12e37] [cursor=pointer]:
+          - /url: /login
+    - main [ref=f12e40]:
+      - generic [ref=f12e41]:
+        - generic [ref=f12e42]:
+          - generic [ref=f12e43]:
+            - generic [ref=f12e44]: GESTIÓN
+            - heading "Niños" [level=1] [ref=f12e45]
+          - button "Agregar niño" [active] [ref=f12e46]
+          - dialog "Agregar niño" [ref=f12e128]:
+            - generic [ref=f12e129]:
+              - button "Cancelar" [ref=f12e130]
+              - generic [ref=f12e131]: Agregar niño
+              - button "Guardar" [ref=f12e132]
+            - generic [ref=f12e133]:
+              - generic [ref=f12e134]:
+                - generic [ref=f12e135]: NOMBRE COMPLETO
+                - textbox "NOMBRE COMPLETO" [ref=f12e136]:
+                  - /placeholder: Ej. Martina López
+              - generic [ref=f12e137]:
+                - generic [ref=f12e138]:
+                  - generic [ref=f12e139]: FECHA DE NACIMIENTO
+                  - textbox "FECHA DE NACIMIENTO" [ref=f12e140]:
+                    - /placeholder: dd/mm/aaaa
+                - generic [ref=f12e141]:
+                  - generic [ref=f12e142]: SALA
+                  - combobox "SALA" [ref=f12e144]:
+                    - option "Soles" [selected]
+                    - option "Lunas"
+                    - option "Estrellas"
+              - generic [ref=f12e145]:
+                - generic [ref=f12e146]: ALERGIAS (ETIQUETAS)
+                - textbox "ALERGIAS (ETIQUETAS)" [ref=f12e147]:
+                  - /placeholder: Ej. Maní, Lactosa
+              - generic [ref=f12e148]:
+                - generic [ref=f12e149]: NOTAS MÉDICAS
+                - textbox "NOTAS MÉDICAS" [ref=f12e150]:
+                  - /placeholder: Indicaciones, medicación, contactos…
+        - textbox "Buscar niño…" [ref=f12e53]
+        - generic [ref=f12e54]:
+          - generic [ref=f12e55]: Sala Soles
+          - generic [ref=f12e56]: 9 niños
+        - generic [ref=f12e58]:
+          - link "M Mateo Fernández 3 años · 2 padres vinculados MANÍ" [ref=f12e59] [cursor=pointer]:
+            - /url: /children/mateo-fernandez
+            - generic [ref=f12e60]: M
+            - generic [ref=f12e61]:
+              - generic [ref=f12e62]: Mateo Fernández
+              - generic [ref=f12e63]: 3 años · 2 padres vinculados
+            - generic [ref=f12e64]: MANÍ
+          - link "S Sofía Méndez 2 años · 1 padre vinculado" [ref=f12e65] [cursor=pointer]:
+            - /url: /children/sofia-mendez
+            - generic [ref=f12e66]: S
+            - generic [ref=f12e67]:
+              - generic [ref=f12e68]: Sofía Méndez
+              - generic [ref=f12e69]: 2 años · 1 padre vinculado
+          - link "B Benjamín Ruiz 3 años · 2 padres vinculados" [ref=f12e72] [cursor=pointer]:
+            - /url: /children/benjamin-ruiz
+            - generic [ref=f12e73]: B
+            - generic [ref=f12e74]:
+              - generic [ref=f12e75]: Benjamín Ruiz
+              - generic [ref=f12e76]: 3 años · 2 padres vinculados
+          - link "V Valentina Soto 2 años · sin padres vinculados VINCULAR" [ref=f12e79] [cursor=pointer]:
+            - /url: /children/valentina-soto
+            - generic [ref=f12e80]: V
+            - generic [ref=f12e81]:
+              - generic [ref=f12e82]: Valentina Soto
+              - generic [ref=f12e83]: 2 años · sin padres vinculados
+            - generic [ref=f12e84]: VINCULAR
+          - link "T Tomás Díaz 3 años · 1 padre vinculado LACTOSA" [ref=f12e85] [cursor=pointer]:
+            - /url: /children/tomas-diaz
+            - generic [ref=f12e86]: T
+            - generic [ref=f12e87]:
+              - generic [ref=f12e88]: Tomás Díaz
+              - generic [ref=f12e89]: 3 años · 1 padre vinculado
+            - generic [ref=f12e90]: LACTOSA
+          - link "E Emma Castro 2 años · 1 padre vinculado" [ref=f12e91] [cursor=pointer]:
+            - /url: /children/emma-castro
+            - generic [ref=f12e92]: E
+            - generic [ref=f12e93]:
+              - generic [ref=f12e94]: Emma Castro
+              - generic [ref=f12e95]: 2 años · 1 padre vinculado
+          - link "L Lucas Romero 3 años · 1 padre vinculado" [ref=f12e98] [cursor=pointer]:
+            - /url: /children/lucas-romero
+            - generic [ref=f12e99]: L
+            - generic [ref=f12e100]:
+              - generic [ref=f12e101]: Lucas Romero
+              - generic [ref=f12e102]: 3 años · 1 padre vinculado
+          - link "O Olivia Vega 2 años · 1 padre vinculado" [ref=f12e105] [cursor=pointer]:
+            - /url: /children/olivia-vega
+            - generic [ref=f12e106]: O
+            - generic [ref=f12e107]:
+              - generic [ref=f12e108]: Olivia Vega
+              - generic [ref=f12e109]: 2 años · 1 padre vinculado
+          - link "L Lucrecia 43 años · sin padres vinculados A LA ABUELA SUSY Y A LA PALA" [ref=f12e112] [cursor=pointer]:
+            - /url: /children/lucrecia
+            - generic [ref=f12e113]: L
+            - generic [ref=f12e114]:
+              - generic [ref=f12e115]: Lucrecia
+              - generic [ref=f12e116]: 43 años · sin padres vinculados
+            - generic [ref=f12e117]: A LA ABUELA SUSY Y A LA PALA
+  - button "Open Next.js Dev Tools" [ref=f12e123] [cursor=pointer]
+  - alert [ref=f12e127]

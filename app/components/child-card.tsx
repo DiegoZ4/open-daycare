@@ -24,12 +24,12 @@ export function ChildCard({ child }: { child: Child }) {
           {child.age} · {child.parentsSummary}
         </div>
       </div>
-      {child.allergyTag ? (
+      {child.allergies.length > 0 ? (
         <span
           className={chipClass}
           style={{ backgroundColor: ALLERGY_CHIP.backgroundColor, color: ALLERGY_CHIP.textColor }}
         >
-          {child.allergyTag}
+          {child.allergies[0].toUpperCase()}
         </span>
       ) : child.needsParentLink ? (
         <span

@@ -1,0 +1,105 @@
+- generic [active] [ref=f21e1]:
+  - generic [ref=f21e2]:
+    - complementary [ref=f21e3]:
+      - link "OpenDayCare Sala Soles" [ref=f21e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f21e9]:
+          - generic [ref=f21e10]: OpenDayCare
+          - generic [ref=f21e11]: Sala Soles
+      - link "Nueva publicación" [ref=f21e12] [cursor=pointer]:
+        - /url: "#"
+      - navigation [ref=f21e15]:
+        - link "Feed" [ref=f21e16] [cursor=pointer]:
+          - /url: /
+        - link "Niños" [ref=f21e19] [cursor=pointer]:
+          - /url: /children
+        - link "Avisos" [ref=f21e24] [cursor=pointer]:
+          - /url: "#"
+        - link "Mi cuenta" [ref=f21e27] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f21e32]:
+        - generic [ref=f21e33]: C
+        - generic [ref=f21e34]:
+          - generic [ref=f21e35]: Caro Giménez
+          - generic [ref=f21e36]: Maestra · Soles
+        - link "Cerrar sesión" [ref=f21e37] [cursor=pointer]:
+          - /url: /login
+    - main [ref=f21e40]:
+      - generic [ref=f21e41]:
+        - generic [ref=f21e42]:
+          - generic [ref=f21e43]:
+            - generic [ref=f21e44]: GESTIÓN
+            - heading "Niños" [level=1] [ref=f21e45]
+          - button "Agregar niño" [ref=f21e46]
+        - textbox "Buscar niño…" [ref=f21e53]
+        - generic [ref=f21e54]:
+          - generic [ref=f21e55]: Sala Soles
+          - generic [ref=f21e56]: 10 niños
+        - generic [ref=f21e58]:
+          - link "M Mateo Fernández 4 años · 2 padres vinculados MANÍ" [ref=f21e59] [cursor=pointer]:
+            - /url: /children/mateo-fernandez
+            - generic [ref=f21e60]: M
+            - generic [ref=f21e61]:
+              - generic [ref=f21e62]: Mateo Fernández
+              - generic [ref=f21e63]: 4 años · 2 padres vinculados
+            - generic [ref=f21e64]: MANÍ
+          - link "S Sofía Méndez 2 años · 1 padre vinculado" [ref=f21e65] [cursor=pointer]:
+            - /url: /children/sofia-mendez
+            - generic [ref=f21e66]: S
+            - generic [ref=f21e67]:
+              - generic [ref=f21e68]: Sofía Méndez
+              - generic [ref=f21e69]: 2 años · 1 padre vinculado
+          - link "B Benjamín Ruiz 3 años · 2 padres vinculados" [ref=f21e72] [cursor=pointer]:
+            - /url: /children/benjamin-ruiz
+            - generic [ref=f21e73]: B
+            - generic [ref=f21e74]:
+              - generic [ref=f21e75]: Benjamín Ruiz
+              - generic [ref=f21e76]: 3 años · 2 padres vinculados
+          - link "V Valentina Soto 2 años · sin padres vinculados VINCULAR" [ref=f21e79] [cursor=pointer]:
+            - /url: /children/valentina-soto
+            - generic [ref=f21e80]: V
+            - generic [ref=f21e81]:
+              - generic [ref=f21e82]: Valentina Soto
+              - generic [ref=f21e83]: 2 años · sin padres vinculados
+            - generic [ref=f21e84]: VINCULAR
+          - link "T Tomás Díaz 3 años · 1 padre vinculado LACTOSA" [ref=f21e85] [cursor=pointer]:
+            - /url: /children/tomas-diaz
+            - generic [ref=f21e86]: T
+            - generic [ref=f21e87]:
+              - generic [ref=f21e88]: Tomás Díaz
+              - generic [ref=f21e89]: 3 años · 1 padre vinculado
+            - generic [ref=f21e90]: LACTOSA
+          - link "E Emma Castro 2 años · 1 padre vinculado" [ref=f21e91] [cursor=pointer]:
+            - /url: /children/emma-castro
+            - generic [ref=f21e92]: E
+            - generic [ref=f21e93]:
+              - generic [ref=f21e94]: Emma Castro
+              - generic [ref=f21e95]: 2 años · 1 padre vinculado
+          - link "L Lucas Romero 3 años · 1 padre vinculado" [ref=f21e98] [cursor=pointer]:
+            - /url: /children/lucas-romero
+            - generic [ref=f21e99]: L
+            - generic [ref=f21e100]:
+              - generic [ref=f21e101]: Lucas Romero
+              - generic [ref=f21e102]: 3 años · 1 padre vinculado
+          - link "O Olivia Vega 2 años · 1 padre vinculado" [ref=f21e105] [cursor=pointer]:
+            - /url: /children/olivia-vega
+            - generic [ref=f21e106]: O
+            - generic [ref=f21e107]:
+              - generic [ref=f21e108]: Olivia Vega
+              - generic [ref=f21e109]: 2 años · 1 padre vinculado
+          - link "L Lucrecia 43 años · sin padres vinculados A LA ABUELA SUSY Y A LA PALA" [ref=f21e112] [cursor=pointer]:
+            - /url: /children/lucrecia
+            - generic [ref=f21e113]: L
+            - generic [ref=f21e114]:
+              - generic [ref=f21e115]: Lucrecia
+              - generic [ref=f21e116]: 43 años · sin padres vinculados
+            - generic [ref=f21e117]: A LA ABUELA SUSY Y A LA PALA
+          - link "M Martina López 11 meses · sin padres vinculados MANÍ" [ref=f21e118] [cursor=pointer]:
+            - /url: /children/martina-lopez
+            - generic [ref=f21e119]: M
+            - generic [ref=f21e120]:
+              - generic [ref=f21e121]: Martina López
+              - generic [ref=f21e122]: 11 meses · sin padres vinculados
+            - generic [ref=f21e123]: MANÍ
+  - button "Open Next.js Dev Tools" [ref=f21e129] [cursor=pointer]
+  - alert [ref=f21e133]

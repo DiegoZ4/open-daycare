@@ -1,7 +1,7 @@
 # SPEC 03 — Login y activación de cuenta (visual)
 
 > **Status:** Implementado
-> **Depends on:** SPEC 01, SPEC 02
+ya> **Depends on:** SPEC 01, SPEC 02
 > **Date:** 2026-11-18
 > **Objective:** Implementar `/login` y `/activate-account` como cáscara visual fiel a `login.dc.html` y `activar-cuenta.dc.html`, sin selector de rol ni autenticación real.
 

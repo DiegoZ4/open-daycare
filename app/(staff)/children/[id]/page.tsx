@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Suspense } from "react";
 import type { Child, Parent } from "@/app/data/children";
 import { children } from "@/app/data/children";
 import { EditChildButton } from "@/app/components/edit-child-button";
@@ -27,16 +26,13 @@ export async function generateMetadata(
   return { title: child ? `${child.name} · OpenDayCare` : "Niños · OpenDayCare" };
 }
 
-export default function ChildProfilePage(props: PageProps<"/children/[id]">) {
-  return (
-    <Suspense fallback={<div className="mx-auto w-full max-w-[820px] pt-[34px] px-4 pb-20 lg:px-10">Cargando...</div>}>
-      <ChildProfileContent params={props.params} />
-    </Suspense>
-  );
-}
+// Blocking route (instead of a Suspense stream): notFound() must run before
+// streaming starts so an unknown id responds with a real 404 status. This
+// opts the segment out of instant-navigation validation.
+export const instant = false;
 
-async function ChildProfileContent({ params }: { params: PageProps<"/children/[id]">['params'] }) {
-  const { id } = await params;
+export default async function ChildProfilePage(props: PageProps<"/children/[id]">) {
+  const { id } = await props.params;
   const child = getChild(id);
   if (!child) notFound();
 

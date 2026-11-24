@@ -1,0 +1,69 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "OpenDayCare" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - link "Nueva publicación" [ref=e10] [cursor=pointer]:
+      - /url: "#"
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: GESTIÓN
+          - heading "Niños" [level=1] [ref=e18]
+        - button "Agregar niño" [ref=e19]
+      - textbox "Buscar niño…" [ref=e26]
+      - generic [ref=e27]:
+        - generic [ref=e28]: Sala Soles
+        - generic [ref=e29]: 8 niños
+      - generic [ref=e31]:
+        - link "M Mateo Fernández 3 años · 2 padres vinculados MANÍ" [ref=e32] [cursor=pointer]:
+          - /url: /children/mateo-fernandez
+          - generic [ref=e33]: M
+          - generic [ref=e34]:
+            - generic [ref=e35]: Mateo Fernández
+            - generic [ref=e36]: 3 años · 2 padres vinculados
+          - generic [ref=e37]: MANÍ
+        - link "S Sofía Méndez 2 años · 1 padre vinculado" [ref=e38] [cursor=pointer]:
+          - /url: /children/sofia-mendez
+          - generic [ref=e39]: S
+          - generic [ref=e40]:
+            - generic [ref=e41]: Sofía Méndez
+            - generic [ref=e42]: 2 años · 1 padre vinculado
+        - link "B Benjamín Ruiz 3 años · 2 padres vinculados" [ref=e45] [cursor=pointer]:
+          - /url: /children/benjamin-ruiz
+          - generic [ref=e46]: B
+          - generic [ref=e47]:
+            - generic [ref=e48]: Benjamín Ruiz
+            - generic [ref=e49]: 3 años · 2 padres vinculados
+        - link "V Valentina Soto 2 años · sin padres vinculados VINCULAR" [ref=e52] [cursor=pointer]:
+          - /url: /children/valentina-soto
+          - generic [ref=e53]: V
+          - generic [ref=e54]:
+            - generic [ref=e55]: Valentina Soto
+            - generic [ref=e56]: 2 años · sin padres vinculados
+          - generic [ref=e57]: VINCULAR
+        - link "T Tomás Díaz 3 años · 1 padre vinculado LACTOSA" [ref=e58] [cursor=pointer]:
+          - /url: /children/tomas-diaz
+          - generic [ref=e59]: T
+          - generic [ref=e60]:
+            - generic [ref=e61]: Tomás Díaz
+            - generic [ref=e62]: 3 años · 1 padre vinculado
+          - generic [ref=e63]: LACTOSA
+        - link "E Emma Castro 2 años · 1 padre vinculado" [ref=e64] [cursor=pointer]:
+          - /url: /children/emma-castro
+          - generic [ref=e65]: E
+          - generic [ref=e66]:
+            - generic [ref=e67]: Emma Castro
+            - generic [ref=e68]: 2 años · 1 padre vinculado
+        - link "L Lucas Romero 3 años · 1 padre vinculado" [ref=e71] [cursor=pointer]:
+          - /url: /children/lucas-romero
+          - generic [ref=e72]: L
+          - generic [ref=e73]:
+            - generic [ref=e74]: Lucas Romero
+            - generic [ref=e75]: 3 años · 1 padre vinculado
+        - link "O Olivia Vega 2 años · 1 padre vinculado" [ref=e78] [cursor=pointer]:
+          - /url: /children/olivia-vega
+          - generic [ref=e79]: O
+          - generic [ref=e80]:
+            - generic [ref=e81]: Olivia Vega
+            - generic [ref=e82]: 2 años · 1 padre vinculado

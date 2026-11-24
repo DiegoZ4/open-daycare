@@ -1,0 +1,21 @@
+- generic [ref=e5]:
+  - generic [ref=e6]:
+    - link "Cancelar" [ref=e7] [cursor=pointer]:
+      - /url: ninos.dc.html
+    - generic [ref=e8]: Agregar niño
+    - link "Guardar" [ref=e9] [cursor=pointer]:
+      - /url: ninos.dc.html
+  - generic [ref=e10]:
+    - generic [ref=e11]: NOMBRE COMPLETO
+    - textbox "Ej. Martina López" [ref=e12]
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]: FECHA DE NACIMIENTO
+        - textbox "dd/mm/aaaa" [ref=e16]
+      - generic [ref=e17]:
+        - generic [ref=e18]: SALA
+        - generic [ref=e19]: Soles
+    - generic [ref=e22]: ALERGIAS (ETIQUETAS)
+    - textbox "Ej. Maní, Lactosa" [ref=e23]
+    - generic [ref=e24]: NOTAS MÉDICAS
+    - textbox "Indicaciones, medicación, contactos…" [ref=e25]

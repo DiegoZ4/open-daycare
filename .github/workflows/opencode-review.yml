@@ -32,6 +32,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Check OpenCode version
+        run: |
+          echo "Checking OpenCode version"
+          curl -s https://api.github.com/repos/anomalyco/opencode/releases/latest \
+            | grep -E 'tag_name|published_at'
+            
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
         env:

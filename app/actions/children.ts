@@ -5,8 +5,11 @@ import {
   children,
   deriveChildFields,
   initialsFromName,
+  parentAvatarForIndex,
+  parentsSummaryFor,
   parseAllergiesText,
 } from "@/app/data/children";
+import type { Parent } from "@/app/data/children";
 import { computeAgeES, currentMonthYearES, formatDateES } from "@/app/lib/date";
 
 // Form input the modal sends after client-side validation. The date arrives
@@ -64,4 +67,50 @@ export async function updateChild(id: string, input: ChildFormInput): Promise<vo
 
   revalidatePath("/children");
   revalidatePath(`/children/${id}`);
+}
+
+// Input the link-parent modal sends after client-side validation.
+export interface ParentFormInput {
+  name: string;
+  email: string;
+  relationship: string; // "Mamá" | "Papá" | "Tutor/a"
+}
+
+export type LinkParentResult = { ok: true } | { ok: false; error: "duplicate-email" };
+
+/**
+ * Adds a pending parent to a child from the link-parent modal, preserving the
+ * rest. The client blocks duplicate emails first; this rejection is the
+ * safety net. Data resets when the dev server restarts (see addChild).
+ */
+export async function linkParent(
+  childId: string,
+  input: ParentFormInput,
+): Promise<LinkParentResult> {
+  const child = children.find((candidate) => candidate.id === childId);
+  if (!child) return { ok: false, error: "duplicate-email" };
+
+  const email = input.email.trim().toLowerCase();
+  if (child.parents.some((parent) => parent.email.toLowerCase() === email)) {
+    return { ok: false, error: "duplicate-email" };
+  }
+
+  const avatar = parentAvatarForIndex(child.parents.length);
+  const parent: Parent = {
+    name: input.name.trim(),
+    email: email,
+    initials: initialsFromName(input.name),
+    avatarBackgroundColor: avatar.background,
+    relationship: input.relationship,
+    status: "pending",
+    statusLabel: "invitación enviada",
+  };
+  child.parents.push(parent);
+  child.parentsSummary = parentsSummaryFor(child.parents.length);
+  // Linking a parent resolves the "VINCULAR" chip marker.
+  delete child.needsParentLink;
+
+  revalidatePath("/children");
+  revalidatePath(`/children/${childId}`);
+  return { ok: true };
 }

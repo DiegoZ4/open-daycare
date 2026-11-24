@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Child, Parent } from "@/app/data/children";
 import { children } from "@/app/data/children";
 import { EditChildButton } from "@/app/components/edit-child-button";
+import { LinkParentButton } from "@/app/components/link-parent-button";
 
 const PARENT_STATUS_CHIP: Record<Parent["status"], { label: string; chipClass: string }> = {
   active: { label: "ACTIVA", chipClass: "bg-[#CFEBD8] text-[#3E9B6C]" },
@@ -183,26 +184,8 @@ export default async function ChildProfilePage(props: PageProps<"/children/[id]"
                 );
               })}
 
-              {/* Vincular otro padre: pantalla futura, link muerto. */}
-              <a href="#" className="flex items-center gap-3 pt-2">
-                <span className="flex items-center justify-center shrink-0 w-10 h-10 rounded-full border-[1.5px] border-dashed border-[#D8CBBA] text-[#B0A290]">
-                  <svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M12 5v14M5 12h14" />
-                  </svg>
-                </span>
-                <span className="font-extrabold text-[14.5px] text-[#C5503A]">
-                  Vincular otro padre
-                </span>
-              </a>
+              {/* Vincular otro padre: abre el modal de invitación (SPEC 05). */}
+              <LinkParentButton child={child} />
             </div>
           </div>
         </div>

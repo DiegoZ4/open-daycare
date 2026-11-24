@@ -37,7 +37,25 @@ jobs:
           echo "Checking OpenCode version"
           curl -s https://api.github.com/repos/anomalyco/opencode/releases/latest \
             | grep -E 'tag_name|published_at'
-            
+
+      - name: Diagnose OpenCode configuration
+        env:
+          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+        run: |
+          echo "Checking API key..."
+          if [ -n "$OPENCODE_API_KEY" ]; then
+            echo "API KEY: PRESENT"
+          else
+            echo "API KEY: EMPTY"
+          fi
+
+          echo "Checking GitHub API..."
+          curl -sS -o /tmp/release.json \
+            -w "HTTP STATUS: %{http_code}\n" \
+            https://api.github.com/repos/anomalyco/opencode/releases/latest
+
+          cat /tmp/release.json
+
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
         env:

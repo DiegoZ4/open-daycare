@@ -40,7 +40,7 @@ jobs:
 
       - name: Diagnose OpenCode configuration
         env:
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENCODE_API_KEY: ${{ secrets.OPENCONDE_API_KEY }}
         run: |
           echo "Checking API key..."
           if [ -n "$OPENCODE_API_KEY" ]; then
@@ -59,7 +59,7 @@ jobs:
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
         env:
-          OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
+          OPENCODE_API_KEY: ${{ secrets.OPENCONDE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           model: opencode-go/glm-5.3

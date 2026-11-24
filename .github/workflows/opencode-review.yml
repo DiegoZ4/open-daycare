@@ -38,5 +38,5 @@ jobs:
           OPENCODE_API_KEY: ${{ secrets.OPENCODE_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          model: glm-5.3
+          model: opencode-go/glm-5.3
           use_github_token: true

@@ -2,6 +2,7 @@ import { computeAgeES, formatDateES } from "@/app/lib/date";
 
 export interface Parent {
   name: string;
+  email: string;
   initials: string;
   // Parent avatars render white initials over this color (see profile page).
   avatarBackgroundColor: string;
@@ -36,6 +37,9 @@ export interface ClassroomSummary {
 // Hardcoded classroom options for the add-child modal (Soles is the comp's).
 export const classrooms = ["Soles", "Lunas", "Estrellas"] as const;
 
+// Relationship options for the link-parent modal (the comp's three pills).
+export const parentRelationships = ["Mamá", "Papá", "Tutor/a"] as const;
+
 // The list shows "SALA SOLES · N niños"; the Feed header mock says "12 niños"
 // (as in the original comps). This discrepancy goes away once there is a DB.
 export const classroomSummary: ClassroomSummary = {
@@ -56,6 +60,23 @@ const AVATAR_PALETTE = [
 export function avatarForIndex(index: number): { background: string; text: string } {
   const pair = AVATAR_PALETTE[Math.abs(index) % AVATAR_PALETTE.length];
   return { background: pair.background, text: pair.text };
+}
+
+// Background colors for parent avatars (white initials are rendered over
+// them), cycled by index within each child's parents array. Seed parents
+// keep their hardcoded colors.
+const PARENT_AVATAR_PALETTE = [
+  "#C9B6E8",
+  "#A9C7E8",
+  "#B9DEC4",
+  "#F4B8CC",
+  "#F4DC8E",
+  "#A9D9E8",
+] as const;
+
+export function parentAvatarForIndex(index: number): { background: string; text: string } {
+  const background = PARENT_AVATAR_PALETTE[Math.abs(index) % PARENT_AVATAR_PALETTE.length];
+  return { background, text: "#FFFFFF" };
 }
 
 /** "Mateo Fernández" → "mateo-fernandez" (accents stripped). */
@@ -142,6 +163,7 @@ export const children: Child[] = [
     parents: [
       {
         name: "Lucía Fernández",
+        email: "lucia.fernandez@ejemplo.com",
         initials: "L",
         avatarBackgroundColor: "#C9B6E8",
         relationship: "Mamá",
@@ -150,6 +172,7 @@ export const children: Child[] = [
       },
       {
         name: "Diego Fernández",
+        email: "diego.fernandez@ejemplo.com",
         initials: "D",
         avatarBackgroundColor: "#A9C7E8",
         relationship: "Papá",
@@ -174,6 +197,7 @@ export const children: Child[] = [
     parents: [
       {
         name: "Mariana Méndez",
+        email: "mariana.mendez@ejemplo.com",
         initials: "M",
         avatarBackgroundColor: "#F4B8CC",
         relationship: "Mamá",
@@ -198,6 +222,7 @@ export const children: Child[] = [
     parents: [
       {
         name: "Carla Ruiz",
+        email: "carla.ruiz@ejemplo.com",
         initials: "C",
         avatarBackgroundColor: "#C9B6E8",
         relationship: "Mamá",
@@ -206,6 +231,7 @@ export const children: Child[] = [
       },
       {
         name: "Pablo Ruiz",
+        email: "pablo.ruiz@ejemplo.com",
         initials: "P",
         avatarBackgroundColor: "#A9C7E8",
         relationship: "Papá",
@@ -247,6 +273,7 @@ export const children: Child[] = [
     parents: [
       {
         name: "Andrés Díaz",
+        email: "andres.diaz@ejemplo.com",
         initials: "A",
         avatarBackgroundColor: "#A9C7E8",
         relationship: "Papá",
@@ -271,6 +298,7 @@ export const children: Child[] = [
     parents: [
       {
         name: "Javier Castro",
+        email: "javier.castro@ejemplo.com",
         initials: "J",
         avatarBackgroundColor: "#B9DEC4",
         relationship: "Papá",
@@ -295,6 +323,7 @@ export const children: Child[] = [
     parents: [
       {
         name: "Paula Romero",
+        email: "paula.romero@ejemplo.com",
         initials: "P",
         avatarBackgroundColor: "#F4B8CC",
         relationship: "Mamá",
@@ -319,6 +348,7 @@ export const children: Child[] = [
     parents: [
       {
         name: "Martín Vega",
+        email: "martin.vega@ejemplo.com",
         initials: "M",
         avatarBackgroundColor: "#A9C7E8",
         relationship: "Papá",

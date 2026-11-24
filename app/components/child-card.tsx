@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { Child } from "@/app/data/children";
+import { LinkParentChip } from "@/app/components/link-parent-chip";
 
 const ALLERGY_CHIP = { backgroundColor: "#FBD8CC", textColor: "#D9684A" };
-const PARENT_LINK_CHIP = { label: "VINCULAR", backgroundColor: "#F9D2DE", textColor: "#C56486" };
 
 const chipClass = "shrink-0 text-[11px] font-extrabold py-[5px] px-[9px] rounded-full";
 
@@ -32,15 +32,7 @@ export function ChildCard({ child }: { child: Child }) {
           {child.allergies[0].toUpperCase()}
         </span>
       ) : child.needsParentLink ? (
-        <span
-          className={chipClass}
-          style={{
-            backgroundColor: PARENT_LINK_CHIP.backgroundColor,
-            color: PARENT_LINK_CHIP.textColor,
-          }}
-        >
-          {PARENT_LINK_CHIP.label}
-        </span>
+        <LinkParentChip child={child} />
       ) : (
         <svg
           className="shrink-0"

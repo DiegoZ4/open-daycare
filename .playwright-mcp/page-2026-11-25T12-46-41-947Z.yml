@@ -1,0 +1,147 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - link "OpenDayCare Sala Soles" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e9]:
+          - generic [ref=e10]: OpenDayCare
+          - generic [ref=e11]: Sala Soles
+      - button "Nueva publicación" [ref=e12] [cursor=pointer]
+      - dialog "Nueva publicación" [ref=e132]:
+        - generic [ref=e133]:
+          - button "Cancelar" [ref=e134] [cursor=pointer]
+          - generic [ref=e135]: Nueva publicación
+          - button "Publicar" [ref=e136] [cursor=pointer]
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - generic [ref=e139]: PARA
+            - generic [ref=e140]:
+              - button "M Mateo" [ref=e141] [cursor=pointer]:
+                - generic [ref=e142]: M
+                - text: Mateo
+              - button "S Sofía" [ref=e143] [cursor=pointer]:
+                - generic [ref=e144]: S
+                - text: Sofía
+              - button "B Benjamín" [ref=e145] [cursor=pointer]:
+                - generic [ref=e146]: B
+                - text: Benjamín
+              - button "V Valentina" [ref=e147] [cursor=pointer]:
+                - generic [ref=e148]: V
+                - text: Valentina
+              - button "T Tomás" [ref=e149] [cursor=pointer]:
+                - generic [ref=e150]: T
+                - text: Tomás
+              - button "E Emma" [ref=e151] [cursor=pointer]:
+                - generic [ref=e152]: E
+                - text: Emma
+              - button "L Lucas" [ref=e153] [cursor=pointer]:
+                - generic [ref=e154]: L
+                - text: Lucas
+              - button "O Olivia" [ref=e155] [cursor=pointer]:
+                - generic [ref=e156]: O
+                - text: Olivia
+              - button "Toda la sala" [ref=e157] [cursor=pointer]
+          - generic [ref=e158]:
+            - generic [ref=e159]: TIPO
+            - generic [ref=e160]:
+              - button "Comida" [ref=e161] [cursor=pointer]
+              - button "Siesta" [ref=e162] [cursor=pointer]
+              - button "Actividad" [active] [ref=e163] [cursor=pointer]
+              - button "Logro" [ref=e164] [cursor=pointer]
+              - button "Ánimo" [ref=e165] [cursor=pointer]
+              - button "Foto" [ref=e166] [cursor=pointer]
+              - button "Anuncio" [ref=e167] [cursor=pointer]
+          - generic [ref=e168]:
+            - generic [ref=e169]: DESCRIPCIÓN
+            - textbox "DESCRIPCIÓN" [ref=e170]:
+              - /placeholder: Contá cómo le fue hoy…
+            - paragraph [ref=e180]: La descripción es obligatoria.
+          - generic [ref=e171]:
+            - generic [ref=e172]: FOTOS
+            - generic [ref=e173]:
+              - generic [ref=e181]:
+                - img "Foto 1 de la publicación" [ref=e182]
+                - button "Quitar foto 1" [ref=e183] [cursor=pointer]
+              - generic [ref=e186]:
+                - img "Foto 2 de la publicación" [ref=e187]
+                - button "Quitar foto 2" [ref=e188] [cursor=pointer]
+              - generic [ref=e191]:
+                - img "Foto 3 de la publicación" [ref=e192]
+                - button "Quitar foto 3" [ref=e193] [cursor=pointer]
+              - button "Agregar" [ref=e196] [cursor=pointer]
+      - navigation [ref=e15]:
+        - link "Feed" [ref=e16] [cursor=pointer]:
+          - /url: /
+        - link "Niños" [ref=e19] [cursor=pointer]:
+          - /url: /children
+        - link "Avisos" [ref=e24] [cursor=pointer]:
+          - /url: "#"
+        - link "Mi cuenta" [ref=e27] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e32]:
+        - generic [ref=e33]: C
+        - generic [ref=e34]:
+          - generic [ref=e35]: Caro Giménez
+          - generic [ref=e36]: Maestra · Soles
+        - link "Cerrar sesión" [ref=e37] [cursor=pointer]:
+          - /url: /login
+    - main [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: GUARDERÍA · SALA SOLES
+          - heading "Buenas, Caro" [level=1] [ref=e44]
+          - paragraph [ref=e45]: 12 niños · martes 17 jun
+        - link "C Compartí un momento…" [ref=e46] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e47]: C
+          - generic [ref=e48]: Compartí un momento…
+        - generic [ref=e53]: PUBLICADO HOY
+        - generic [ref=e56]:
+          - article [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]: M
+              - generic [ref=e60]:
+                - generic [ref=e61]: Mateo
+                - generic [ref=e62]: 14:20 · publicado por vos
+              - generic [ref=e63]: LOGRO
+            - generic [ref=e66]: "Para: familia de Mateo"
+            - paragraph [ref=e67]: ¡Usó el orinal solito por primera vez! Estaba feliz de contárselo a todos. Un gran paso.
+            - generic [ref=e68]:
+              - generic [ref=e69]: "3"
+              - link "1" [ref=e72] [cursor=pointer]:
+                - /url: "#"
+              - link "Editar" [ref=e75] [cursor=pointer]:
+                - /url: "#"
+          - article [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: M
+              - generic [ref=e79]:
+                - generic [ref=e80]: Mateo
+                - generic [ref=e81]: 09:40 · publicado por vos
+              - generic [ref=e82]: ACTIVIDAD
+            - generic [ref=e85]: "Para: familia de Mateo"
+            - paragraph [ref=e86]: Pintamos con témperas esta mañana. Mateo eligió el azul para todo y se concentró un montón mezclando colores.
+            - link "Foto · pintando con témperas" [ref=e87] [cursor=pointer]:
+              - /url: "#"
+            - generic [ref=e93]:
+              - generic [ref=e94]: "5"
+              - link "2" [ref=e97] [cursor=pointer]:
+                - /url: "#"
+              - link "Editar" [ref=e100] [cursor=pointer]:
+                - /url: "#"
+          - article [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e106]:
+                - generic [ref=e107]: Anuncio general
+                - generic [ref=e108]: 07:50 · publicado por vos
+              - generic [ref=e109]: ANUNCIO
+            - generic [ref=e112]: "Para: toda la sala"
+            - paragraph [ref=e113]: El viernes salimos al parque por la mañana. Recuerden mandar gorra y una botellita de agua.
+            - generic [ref=e114]:
+              - generic [ref=e115]: "8"
+              - link "0" [ref=e118] [cursor=pointer]:
+                - /url: "#"
+              - link "Editar" [ref=e121] [cursor=pointer]:
+                - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=e127] [cursor=pointer]
+  - alert [ref=e131]

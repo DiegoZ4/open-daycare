@@ -4,8 +4,12 @@ const POST_TYPE_BADGE: Record<
   PostType,
   { label: string; backgroundColor: string; textColor: string }
 > = {
-  achievement: { label: "LOGRO", backgroundColor: "#CFEBD8", textColor: "#3E9B6C" },
+  meal: { label: "COMIDA", backgroundColor: "#F7E7A6", textColor: "#9A7B1E" },
+  nap: { label: "SIESTA", backgroundColor: "#E7DCF6", textColor: "#7B5FC0" },
   activity: { label: "ACTIVIDAD", backgroundColor: "#C7E7F1", textColor: "#2E89A6" },
+  achievement: { label: "LOGRO", backgroundColor: "#CFEBD8", textColor: "#3E9B6C" },
+  mood: { label: "ÁNIMO", backgroundColor: "#F9D2DE", textColor: "#C56486" },
+  photo: { label: "FOTO", backgroundColor: "#FBD8CC", textColor: "#D9684A" },
   announcement: { label: "ANUNCIO", backgroundColor: "#CCD8F4", textColor: "#4E72C8" },
 };
 
@@ -63,7 +67,24 @@ export function PostCard({ post }: { post: Post }) {
       </header>
       <div className="mb-[10px] text-[12.5px] text-[#A89A8B]">Para: {post.audience}</div>
       <p className="text-[15.5px] leading-[1.55] text-[#4A4038]">{post.text}</p>
-      {post.photoPlaceholder ? (
+      {post.photos && post.photos.length > 0 ? (
+        // Real photos from the new-post modal: 1 → wide image, 2–4 → 2×2 grid.
+        <div
+          className={`mt-[14px] gap-[10px] ${
+            post.photos.length === 1 ? "grid" : "grid grid-cols-2"
+          }`}
+        >
+          {post.photos.map((photo, index) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={`${index}-${photo.length}`}
+              src={photo}
+              alt="Foto de la publicación"
+              className="w-full rounded-[16px] border border-[#ECE0D0] object-cover h-[200px]"
+            />
+          ))}
+        </div>
+      ) : post.photoPlaceholder ? (
         <a
           href="#"
           className="mt-[14px] flex flex-col items-center justify-center gap-2 rounded-[16px] border-[1.5px] border-dashed border-[#DBCDBA] bg-[#F4ECE1] h-[200px] text-[#B0A290]"

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { classroom, staffUser } from "@/app/data/feed";
 import { SidebarNav } from "@/app/components/sidebar-nav";
+import { NewPostButton } from "@/app/components/new-post-button";
 
 export function Sidebar() {
   return (
@@ -28,24 +29,7 @@ export function Sidebar() {
           <div className="mt-[2px] text-[11.5px] text-[#A89A8B]">{classroom.name}</div>
         </div>
       </Link>
-      <a
-        href="#"
-        className="flex items-center justify-center gap-2 w-full p-3 rounded-[14px] bg-[linear-gradient(180deg,#F4977E,#EE8164)] text-white font-extrabold text-[14.5px] shadow-[0_8px_18px_-8px_rgba(238,129,100,0.75)] mb-[18px]"
-      >
-        <svg
-          width="17"
-          height="17"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#fff"
-          strokeWidth="2.4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M12 5v14M5 12h14" />
-        </svg>
-        Nueva publicación
-      </a>
+      <NewPostButton />
       <SidebarNav />
       <div className="mt-[10px] border-t border-[#ECE0D0] pt-[14px]">
         <div className="flex items-center gap-[11px] py-[6px] px-2">

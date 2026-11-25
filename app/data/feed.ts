@@ -1,4 +1,11 @@
-export type PostType = "achievement" | "activity" | "announcement";
+export type PostType =
+  | "meal"
+  | "nap"
+  | "activity"
+  | "achievement"
+  | "mood"
+  | "photo"
+  | "announcement";
 
 export interface Actor {
   name: string;
@@ -16,6 +23,9 @@ export interface Post {
   audience: string;
   text: string;
   photoPlaceholder?: string;
+  // Data URLs (máx 4) — posts created from the new-post modal. Posts without
+  // photos keep rendering the dashed photoPlaceholder (see PostCard).
+  photos?: string[];
   hearts: number;
   comments: number;
 }
@@ -31,6 +41,23 @@ export interface StaffUser {
   role: string;
   initials: string;
 }
+
+// The new-post modal's TIPO pills (pastel colors from the comp) — also the
+// source for the feed badges (see PostCard's POST_TYPE_BADGE).
+export const POST_TYPES: Array<{
+  key: PostType;
+  label: string;
+  bg: string;
+  text: string;
+}> = [
+  { key: "meal", label: "Comida", bg: "#F7E7A6", text: "#9A7B1E" },
+  { key: "nap", label: "Siesta", bg: "#E7DCF6", text: "#7B5FC0" },
+  { key: "activity", label: "Actividad", bg: "#C7E7F1", text: "#2E89A6" },
+  { key: "achievement", label: "Logro", bg: "#CFEBD8", text: "#3E9B6C" },
+  { key: "mood", label: "Ánimo", bg: "#F9D2DE", text: "#C56486" },
+  { key: "photo", label: "Foto", bg: "#FBD8CC", text: "#D9684A" },
+  { key: "announcement", label: "Anuncio", bg: "#CCD8F4", text: "#4E72C8" },
+];
 
 const mateo: Actor = {
   name: "Mateo",

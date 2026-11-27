@@ -35,7 +35,23 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 - Playwright screenshots y cualquier cosa relacionada a Playwright tienen que estar en la carpeta ./playwright-mcp
 - Context 7 Usaremos este MCP para traer la documentacion actualizada del framework.
+- Supabase: usaremos este MCP para interactuar con el proyecto (SQL, migraciones, logs, tipos TypeScript generados). Cambios de schema van directo al proyecto remoto: verificar antes de aplicar.
 
+## Supabase
+
+- Backend del proyecto. El schema de referencia vive en `C:\Diego\OpenCode\07-DB-Schema` (material externo, solo lectura): **no está implementado todavía** en la base, se crea siguiendo esa referencia.
+- Skill `supabase` instalada en `.agents/skills/supabase/`: cargarla SIEMPRE antes de cualquier tarea que toque Supabase (DB, Auth, RLS, Storage, Edge Functions, Realtime, migraciones, debugging de errores HTTP/Postgres/RLS).
+- Reglas clave que aplica la skill (no reinventar):
+  - RLS habilitado en todas las tablas de schemas expuestos (`public` por defecto).
+  - Nunca usar `auth.role()` (deprecado) ni `user_metadata` para autorización; usar `TO authenticated/anon` + predicado de ownership con `(select auth.uid())`.
+  - Nunca exponer `service_role` ni secret keys en código de cliente; solo publishable keys.
+  - Verificar cambios con una query de prueba después de implementar.
+
+## Skills instaladas
+
+- Las skills del proyecto viven en `.agents/skills/` (`spec`, `spec-impl`, `supabase`); OpenCode las expone como skills disponibles con sus triggers en la descripción.
+- `spec` y `spec-impl` ya están documentadas en la sección Spec Drive Development.
+- Al instalar skills nuevas con `npx skills add`, quedan en `.agents/skills/` y conviene sumarlas acá.
 
 ## Spec Drive Development
 

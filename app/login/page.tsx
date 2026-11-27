@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { LoginForm } from "./login-form";
+
 export const metadata: Metadata = {
   title: "Iniciar sesión · OpenDayCare",
 };
-
-// Exact control styling from login.dc.html: 14px/16px padding, 1.5px #EADFD0
-// border, 14px radius, 15px text. Kept local per SPEC 03 — this comp uses 700
-// labels and 14/16 padding, unlike the shared form-field.tsx (800, 13/16).
-const inputClass =
-  "w-full py-[14px] px-4 rounded-[14px] border-[1.5px] border-[#EADFD0] bg-white text-[15px] text-[#3F362E]";
 
 // Sun icon shared by the brand tile (login panel and activation card).
 function SunIcon({ size, strokeWidth }: { size: number; strokeWidth: number }) {
@@ -75,37 +71,9 @@ export default function LoginPage() {
             Ingresá para ver el día de hoy.
           </p>
 
-          <div className="mb-2 text-[12px] font-bold tracking-[0.7px] text-[#94887B]">
-            EMAIL
-          </div>
-          <input
-            type="email"
-            defaultValue="caro@opendaycare.com"
-            className={`${inputClass} mb-[18px]`}
-          />
-
-          <div className="mb-2 text-[12px] font-bold tracking-[0.7px] text-[#94887B]">
-            CONTRASEÑA
-          </div>
-          <input
-            type="password"
-            placeholder="••••••••"
-            className={`${inputClass} mb-[10px]`}
-          />
-
-          <div className="mb-5 text-right">
-            {/* Dead link: no password-reset comp exists yet (SPEC 03). */}
-            <a href="#" className="text-[13.5px] font-bold text-[#C5503A]">
-              ¿Olvidaste tu contraseña?
-            </a>
-          </div>
-
-          <Link
-            href="/"
-            className="block w-full rounded-[15px] bg-[linear-gradient(180deg,#F4977E,#EE8164)] py-[15px] text-center text-[16px] font-extrabold text-white shadow-[0_10px_22px_-8px_rgba(238,129,100,0.7)]"
-          >
-            Iniciar sesión
-          </Link>
+          {/* Real auth form: signInWithPassword against Supabase (SPEC 09).
+              Fields start empty — the comp prefills are gone. */}
+          <LoginForm />
 
           <p className="mt-6 text-center text-[14.5px] text-[#94887B]">
             ¿Te invitó la guardería?{" "}

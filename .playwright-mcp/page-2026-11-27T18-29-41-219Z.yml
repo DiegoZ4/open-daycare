@@ -1,0 +1,18 @@
+- generic [active] [ref=f16e1]:
+  - generic [ref=f16e17]:
+    - heading "Iniciar sesión" [level=2] [ref=f16e18]
+    - paragraph [ref=f16e19]: Ingresá para ver el día de hoy.
+    - generic [ref=f16e20]:
+      - generic [ref=f16e21]: EMAIL
+      - textbox [ref=f16e22]: staff@sasoles.test
+      - generic [ref=f16e23]: CONTRASEÑA
+      - textbox "••••••••" [ref=f16e24]: demo-staff-2026
+      - link "¿Olvidaste tu contraseña?" [ref=f16e26] [cursor=pointer]:
+        - /url: "#"
+      - button "Iniciar sesión" [ref=f16e27]
+    - paragraph [ref=f16e28]:
+      - text: ¿Te invitó la guardería?
+      - link "Activá tu cuenta" [ref=f16e29] [cursor=pointer]:
+        - /url: /activate-account
+  - button "Open Next.js Dev Tools" [ref=f16e35] [cursor=pointer]
+  - alert [ref=f16e39]

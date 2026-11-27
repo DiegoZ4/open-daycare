@@ -1,0 +1,9 @@
+- generic [active] [ref=f18e1]:
+  - button "Open Next.js Dev Tools" [ref=f18e41] [cursor=pointer]:
+    - generic [ref=f18e44]:
+      - text: Rendering
+      - generic [ref=f18e45]:
+        - generic [ref=f18e46]: .
+        - generic [ref=f18e47]: .
+        - generic [ref=f18e48]: .
+  - alert [ref=f18e39]: El día de cada niño,compartido con su familia.

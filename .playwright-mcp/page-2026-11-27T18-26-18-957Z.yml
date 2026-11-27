@@ -1,0 +1,84 @@
+- generic [active] [ref=f9e1]:
+  - generic [ref=f9e41]:
+    - complementary [ref=f9e42]:
+      - link "OpenDayCare Guardería Sala Soles" [ref=f9e43] [cursor=pointer]:
+        - /url: /
+        - generic [ref=f9e48]:
+          - generic [ref=f9e49]: OpenDayCare
+          - generic [ref=f9e50]: Guardería Sala Soles
+      - button "Nueva publicación" [ref=f9e51] [cursor=pointer]
+      - navigation [ref=f9e54]:
+        - link "Feed" [ref=f9e55] [cursor=pointer]:
+          - /url: /
+        - link "Niños" [ref=f9e58] [cursor=pointer]:
+          - /url: /children
+        - link "Avisos" [ref=f9e63] [cursor=pointer]:
+          - /url: "#"
+        - link "Mi cuenta" [ref=f9e66] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f9e71]:
+        - generic [ref=f9e72]: DA
+        - generic [ref=f9e73]:
+          - generic [ref=f9e74]: Diego Admin
+          - generic [ref=f9e75]: Admin
+        - button "Cerrar sesión" [ref=f9e76]
+    - main [ref=f9e79]:
+      - generic [ref=f9e80]:
+        - generic [ref=f9e81]:
+          - generic [ref=f9e82]: GUARDERÍA · SALA SOLES
+          - heading "Buenas, Caro" [level=1] [ref=f9e83]
+          - paragraph [ref=f9e84]: 12 niños · martes 17 jun
+        - link "C Compartí un momento…" [ref=f9e85] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=f9e86]: C
+          - generic [ref=f9e87]: Compartí un momento…
+        - generic [ref=f9e92]: PUBLICADO HOY
+        - generic [ref=f9e95]:
+          - article [ref=f9e96]:
+            - generic [ref=f9e97]:
+              - generic [ref=f9e98]: M
+              - generic [ref=f9e99]:
+                - generic [ref=f9e100]: Mateo
+                - generic [ref=f9e101]: 14:20 · publicado por vos
+              - generic [ref=f9e102]: LOGRO
+            - generic [ref=f9e105]: "Para: familia de Mateo"
+            - paragraph [ref=f9e106]: ¡Usó el orinal solito por primera vez! Estaba feliz de contárselo a todos. Un gran paso.
+            - generic [ref=f9e107]:
+              - generic [ref=f9e108]: "3"
+              - link "1" [ref=f9e111] [cursor=pointer]:
+                - /url: "#"
+              - link "Editar" [ref=f9e114] [cursor=pointer]:
+                - /url: "#"
+          - article [ref=f9e115]:
+            - generic [ref=f9e116]:
+              - generic [ref=f9e117]: M
+              - generic [ref=f9e118]:
+                - generic [ref=f9e119]: Mateo
+                - generic [ref=f9e120]: 09:40 · publicado por vos
+              - generic [ref=f9e121]: ACTIVIDAD
+            - generic [ref=f9e124]: "Para: familia de Mateo"
+            - paragraph [ref=f9e125]: Pintamos con témperas esta mañana. Mateo eligió el azul para todo y se concentró un montón mezclando colores.
+            - link "Foto · pintando con témperas" [ref=f9e126] [cursor=pointer]:
+              - /url: "#"
+            - generic [ref=f9e132]:
+              - generic [ref=f9e133]: "5"
+              - link "2" [ref=f9e136] [cursor=pointer]:
+                - /url: "#"
+              - link "Editar" [ref=f9e139] [cursor=pointer]:
+                - /url: "#"
+          - article [ref=f9e140]:
+            - generic [ref=f9e141]:
+              - generic [ref=f9e145]:
+                - generic [ref=f9e146]: Anuncio general
+                - generic [ref=f9e147]: 07:50 · publicado por vos
+              - generic [ref=f9e148]: ANUNCIO
+            - generic [ref=f9e151]: "Para: toda la sala"
+            - paragraph [ref=f9e152]: El viernes salimos al parque por la mañana. Recuerden mandar gorra y una botellita de agua.
+            - generic [ref=f9e153]:
+              - generic [ref=f9e154]: "8"
+              - link "0" [ref=f9e157] [cursor=pointer]:
+                - /url: "#"
+              - link "Editar" [ref=f9e160] [cursor=pointer]:
+                - /url: "#"
+  - button "Open Next.js Dev Tools" [ref=f9e35] [cursor=pointer]
+  - alert [ref=f9e39]: El día de cada niño,compartido con su familia.

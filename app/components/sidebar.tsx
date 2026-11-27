@@ -1,9 +1,22 @@
 import Link from "next/link";
-import { classroom, staffUser } from "@/app/data/feed";
 import { SidebarNav } from "@/app/components/sidebar-nav";
 import { NewPostButton } from "@/app/components/new-post-button";
+import { SidebarLogout } from "@/app/components/sidebar-logout";
+import type { Profile } from "@/app/(staff)/auth-guard";
 
-export function Sidebar() {
+// Spanish UI labels for the user_role enum values (DB keeps English enums).
+const ROLE_LABELS: Record<Profile["role"], string> = {
+  admin: "Admin",
+  staff: "Personal",
+  parent: "Familia",
+};
+
+function initialsOf(fullName: string): string {
+  const parts = fullName.trim().split(/\s+/).slice(0, 2);
+  return parts.map((part) => part.charAt(0).toUpperCase()).join("");
+}
+
+export function Sidebar({ profile }: { profile: Profile }) {
   return (
     <aside className="hidden lg:flex w-[248px] shrink-0 flex-col bg-[#FFFDF9] border-r border-[#ECE0D0] py-6 px-4 sticky top-0 h-screen">
       <Link href="/" className="flex items-center gap-[11px] px-2 pt-1 pb-[22px]">
@@ -26,38 +39,36 @@ export function Sidebar() {
           <div className="font-display font-semibold text-[17px] leading-none text-[#3F362E]">
             OpenDayCare
           </div>
-          <div className="mt-[2px] text-[11.5px] text-[#A89A8B]">{classroom.name}</div>
+          <div className="mt-[2px] text-[11.5px] text-[#A89A8B] truncate">
+            {profile.daycareName}
+          </div>
         </div>
       </Link>
       <NewPostButton />
       <SidebarNav />
       <div className="mt-[10px] border-t border-[#ECE0D0] pt-[14px]">
         <div className="flex items-center gap-[11px] py-[6px] px-2">
-          <div className="flex items-center justify-center shrink-0 w-[38px] h-[38px] rounded-full bg-[#F2937A] text-white font-display font-semibold text-[16px]">
-            {staffUser.initials}
-          </div>
+          {profile.avatarUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={profile.avatarUrl}
+              alt={profile.fullName}
+              className="flex items-center justify-center shrink-0 w-[38px] h-[38px] rounded-full object-cover"
+            />
+          ) : (
+            <div className="flex items-center justify-center shrink-0 w-[38px] h-[38px] rounded-full bg-[#F2937A] text-white font-display font-semibold text-[16px]">
+              {initialsOf(profile.fullName)}
+            </div>
+          )}
           <div className="flex-1 min-w-0">
-            <div className="font-extrabold text-[14px] text-[#3F362E]">{staffUser.name}</div>
-            <div className="text-[12px] text-[#A89A8B]">{staffUser.role}</div>
+            <div className="font-extrabold text-[14px] text-[#3F362E] truncate">
+              {profile.fullName}
+            </div>
+            <div className="text-[12px] text-[#A89A8B]">
+              {ROLE_LABELS[profile.role]}
+            </div>
           </div>
-          <a
-            href="/login"
-            title="Cerrar sesión"
-            className="shrink-0 flex items-center justify-center w-8 h-8 rounded-[10px] bg-[#F6ECDF] text-[#94887B]"
-          >
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9" />
-            </svg>
-          </a>
+          <SidebarLogout />
         </div>
       </div>
     </aside>

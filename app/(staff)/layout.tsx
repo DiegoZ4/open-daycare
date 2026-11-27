@@ -1,15 +1,15 @@
-import type { ReactNode } from "react";
-import { Sidebar } from "@/app/components/sidebar";
-import { TopBar } from "@/app/components/top-bar";
+import { Suspense } from "react";
 
-export default function StaffLayout({ children }: { children: ReactNode }) {
+import { AuthGuard } from "./auth-guard";
+
+export default function StaffLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen flex-col bg-[#F6ECDF] lg:flex-row">
-      <Sidebar />
-      <TopBar />
-      <main className="min-w-0 flex-1 lg:h-screen lg:overflow-y-auto">
-        {children}
-      </main>
+      {/* AuthGuard reads cookies (runtime API) so it lives inside Suspense
+          per the cacheComponents pattern (see specs/09 step 3). */}
+      <Suspense fallback={null}>
+        <AuthGuard>{children}</AuthGuard>
+      </Suspense>
     </div>
   );
 }

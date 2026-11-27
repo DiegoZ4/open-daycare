@@ -53,6 +53,14 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - `spec` y `spec-impl` ya están documentadas en la sección Spec Drive Development.
 - Al instalar skills nuevas con `npx skills add`, quedan en `.agents/skills/` y conviene sumarlas acá.
 
+## Base de datos (Supabase)
+
+- Toda migración se aplica al proyecto remoto vía MCP `apply_migration` (queda en el historial del proyecto, visible en Dashboard) **y además** se crea su archivo espejo en `supabase/migrations/<timestamp>_<name>.sql` con el SQL idéntico al aplicado, para versionar el esquema en el repo. Nunca solo una de las dos cosas.
+- El timestamp del archivo sigue el formato `YYYYMMDDHHMMSS` y coincide con el de la migración remota (lo devuelve `list_migrations`).
+- DDL y datos van en migraciones separadas (ej. `create_daycares_table` + `seed_daycares`).
+- RLS se habilita en toda tabla de `public` desde su propia migración; las policies se diseñan en la spec correspondiente (hoy: deny-all hasta tener auth).
+- `execute_sql` es solo para queries y verificación, nunca para DDL (no deja historial de migraciones).
+
 ## Spec Drive Development
 
 Flujo por pantalla: `/spec` (crear) → `/spec-impl` (implementar) → `/spec-verifier` (verificar y marcar checks).

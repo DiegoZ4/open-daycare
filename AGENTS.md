@@ -65,6 +65,8 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Flujo por pantalla: `/spec` (crear) → `/spec-impl` (implementar) → `/spec-verifier` (verificar y marcar checks).
 
+- **Ubicación de specs:** los specs de UI van en `specs/` (raíz) y los de base de datos en `specs/database/`. La numeración es global y continua: el número de un spec nuevo siempre es el más alto + 1, sin importar la carpeta (hoy: `01`–`06` en raíz, `07`–`08` en `specs/database/`).
+
 - /spec Usaremos esta habilidad para crear las especificaciones.
 - /spec-impl Usaremos esta skill para hacer las implementaciones.
 - /spec-verifier Verifica los acceptance criteria de un spec, corrige lo que falle y marca los checks. Uso: `/spec-verifier @specs/01-home-feed-visual.md`. Definido en `.opencode/commands/spec-verifier.md`; ejecuta el agente `spec-verify` como subagent.

@@ -47,6 +47,16 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
   - Nunca exponer `service_role` ni secret keys en código de cliente; solo publishable keys.
   - Verificar cambios con una query de prueba después de implementar.
 
+### Acceso a la base desde la app (Next.js)
+
+- Interactuamos con la base usando los paquetes oficiales de Supabase: `@supabase/supabase-js` + `@supabase/ssr`. No inventar clientes ni usar fetch directo a la Data API.
+- Helpers de cliente ya configurados en `utils/supabase/`:
+  - `utils/supabase/server.ts` — `createClient(cookieStore)` para Server Components y Server Actions (usa `cookies()` de `next/headers`).
+  - `utils/supabase/client.ts` — `createClient()` para Componentes de cliente (browser client).
+  - `utils/supabase/proxy.ts` — `updateSession(request)`: refresca los tokens de auth en cada request; lo invoca `proxy.ts` en la raíz (Next 16 renombró `middleware.ts` a `proxy.ts`; no crear archivos `middleware.ts`).
+- Credenciales en `.env.local`: `NEXT_PUBLIC_SUPABASE_URL` y `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` (solo publishable key, nunca `service_role`).
+- Al momento no hay tablas implementadas ni auth conectado: los redirects de rutas protegidas quedan pendientes en `utils/supabase/proxy.ts` hasta que una spec los defina.
+
 ## Skills instaladas
 
 - Las skills del proyecto viven en `.agents/skills/` (`spec`, `spec-impl`, `supabase`); OpenCode las expone como skills disponibles con sus triggers en la descripción.
